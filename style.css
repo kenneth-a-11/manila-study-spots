@@ -98,7 +98,6 @@ footer {
    4. COMPONENTS
    ========================================================================== */
 
-/* 🎯 MODULE 6.3 UPDATE: Vertical & Horizontal Centering Technique (Lesson 6.4) */
 .hero {
   display: flex;
   flex-direction: column;
