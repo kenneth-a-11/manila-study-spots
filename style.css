@@ -38,32 +38,36 @@ img {
 /* ==========================================================================
    3. LAYOUT REGIONS
    ========================================================================== */
+
+/* 🎯 MODULE 6.3 UPDATE: Header transformed to Flexbox container */
 header {
   background-color: var(--dark-ink);
   color: #ffffff;
   padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
+/* Clear bottom margin to align perfectly with flexbox */
 header h1 {
   font-size: 1.8rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0;
 }
 
-header p {
-  font-size: 0.95rem;
-  color: var(--muted-grey);
-  margin-bottom: 1rem;
-}
-
-/* Navigation styled per requirement using display: inline-block */
+/* 🎯 MODULE 6.3 UPDATE: Nav ul transformed to Flexbox container */
 nav ul {
   list-style: none;
   padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 20px; /* Modern spacing replacing inline margins */
 }
 
+/* Cleared old inline-block rules */
 nav li {
-  display: inline-block;
-  margin-right: 1.5rem;
+  display: list-item;
+  margin-right: 0;
 }
 
 nav a {
@@ -93,6 +97,29 @@ footer {
 /* ==========================================================================
    4. COMPONENTS
    ========================================================================== */
+
+/* 🎯 MODULE 6.3 UPDATE: Vertical & Horizontal Centering Technique (Lesson 6.4) */
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertical centering */
+  align-items: center;     /* Horizontal centering */
+  min-height: 160px;       /* Required height for vertical centering to operate */
+  background-color: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  border-left: 4px solid var(--brand-color);
+  padding: 1.5rem 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.hero p {
+  color: #64748b;
+  margin-bottom: 0;
+  font-size: 1rem;
+}
 
 /* Place Entry Cards */
 .place-card,
